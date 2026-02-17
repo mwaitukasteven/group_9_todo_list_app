@@ -12,7 +12,7 @@
 
 ## Application description
 
-# application will allow user to:
+### application will allow user to:
 1. add task
 2. view added task
 3. users to edit task
