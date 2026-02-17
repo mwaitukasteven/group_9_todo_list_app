@@ -15,7 +15,7 @@
 ##### application will allow user to:
 1. add task
 2. view added task
-3. users to edit task
+3. edit task
 4. mark task as done
 5. delete task
 
