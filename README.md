@@ -25,7 +25,7 @@ Follow these steps to run the Flutter application locally:
 
 ### 1.firstly make sure you have installed the flutter sdk and emulator in your system
 
-### 2.Clone the Repository and open it using any vscode by running the following commands:
+### 2.Clone the Repository and open it using vscode or any code editor by running the following commands:
 ```bash
 git clone https://github.com/mwaitukasteven/group_9_todo_list_app.git
 cd group_9_todo_list_app
