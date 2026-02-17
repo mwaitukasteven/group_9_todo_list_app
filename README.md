@@ -18,3 +18,12 @@
 3. users to edit task
 4. mark task as done
 5. delete task
+
+## HOW TO RUN THE APPLICATION
+
+Follow these steps to run the Flutter application locally:
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/mwaitukasteven/group_9_todo_list_app.git
+cd group_9_todo_list_app
