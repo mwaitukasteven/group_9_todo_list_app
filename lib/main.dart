@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'pages/welcome_page.dart';
+import 'services/task_service.dart';
+import 'pages/home_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await TaskService.init();
   runApp(const MyApp());
 }
 
@@ -10,9 +13,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: WelcomePage(),
+      title: 'ToDo App',
+      theme: ThemeData(
+        primaryColor: Colors.blue,
+        scaffoldBackgroundColor: const Color(0xFFF4F6FA),
+      ),
+      home: const HomePage(),
     );
   }
 }
