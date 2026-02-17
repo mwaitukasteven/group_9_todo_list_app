@@ -1,4 +1,4 @@
-## 👥 GROUP MEMBERS
+## GROUP MEMBERS
 
 | # | NAME                         | REGISTRATION NUMBER |
 |---|------------------------------|---------------------|
