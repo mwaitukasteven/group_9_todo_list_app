@@ -19,7 +19,7 @@
 4. mark task as done
 5. delete task
 
-## HOW TO RUN THE APPLICATION
+## How to run application
 
 Follow these steps to run the Flutter application locally:
 
@@ -39,3 +39,20 @@ flutter pub get
 ```bash
 flutter run
 ```
+
+## Screenshots of the application
+
+### Main Screen
+![Main Screen](screenshot/main_home.jpeg)
+
+### Adding a Task
+![Add Task](screenshot/add.jpeg)
+
+### List Task
+![Add Task](screenshot/list.jpeg)
+
+### Completing a Task
+![Complete Task](screenshot/mark.jpeg)
+
+### Deleting a Task
+![Delete Task](screenshots/delete.png)
