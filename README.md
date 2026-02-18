@@ -55,4 +55,4 @@ flutter run
 ![Complete Task](screenshot/mark.jpeg)
 
 ### Deleting a Task
-![Delete Task](screenshots/delete.png)
+![Delete Task](screenshots/delete.jpeg)
