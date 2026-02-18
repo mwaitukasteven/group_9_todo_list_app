@@ -1,30 +1,27 @@
-import 'package:hive_flutter/hive_flutter.dart';
 import '../models/task_model.dart';
 
 class TaskService {
-  static const String boxName = "tasksBox";
-
-  static Future<void> init() async {
-    await Hive.initFlutter();
-    await Hive.openBox(boxName);
-  }
-
-  static Box get _box => Hive.box(boxName);
+  static final List<Task> _tasks = [
+    Task(title: "Complete Flutter Assignment"),
+    Task(title: "Read Hive Documentation"),
+    Task(title: "Design App UI"),
+    Task(title: "Test Application"),
+    Task(title: "Push Project to GitHub"),
+  ];
 
   static List<Task> getTasks() {
-    final data = _box.values.toList();
-    return data.map((e) => Task.fromMap(Map<String, dynamic>.from(e))).toList();
+    return _tasks;
   }
 
   static Future<void> addTask(Task task) async {
-    await _box.add(task.toMap());
+    _tasks.add(task);
   }
 
-  static Future<void> deleteTask(int index) async {
-    await _box.deleteAt(index);
+  static void deleteTask(Task task) {
+    _tasks.remove(task);
   }
 
-  static Future<void> updateTask(int index, Task task) async {
-    await _box.putAt(index, task.toMap());
+  static void toggleTask(Task task) {
+    task.isCompleted = !task.isCompleted;
   }
 }

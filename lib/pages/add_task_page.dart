@@ -12,9 +12,9 @@ class AddTaskPage extends StatefulWidget {
 class _AddTaskPageState extends State<AddTaskPage> {
   final TextEditingController controller = TextEditingController();
 
-  void saveTask() async {
+  void saveTask() {
     if (controller.text.isNotEmpty) {
-      await TaskService.addTask(Task(title: controller.text));
+      TaskService.addTask(Task(title: controller.text));
       Navigator.pop(context);
     }
   }
@@ -22,29 +22,20 @@ class _AddTaskPageState extends State<AddTaskPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Add Task"),
-        backgroundColor: Colors.green,
-      ),
+      appBar: AppBar(title: const Text("Add Task")),
       body: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(16),
         child: Column(
           children: [
             TextField(
               controller: controller,
-              decoration: const InputDecoration(
-                labelText: "Task Title",
-                border: OutlineInputBorder(),
-              ),
+              decoration: const InputDecoration(labelText: "Task Title"),
             ),
             const SizedBox(height: 20),
             ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
-                  minimumSize: const Size(double.infinity, 50)),
               onPressed: saveTask,
-              child: const Text("Save Task"),
-            )
+              child: const Text("Save"),
+            ),
           ],
         ),
       ),
